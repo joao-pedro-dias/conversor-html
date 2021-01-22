@@ -145,20 +145,6 @@ function converterPalavrasComAcentos(elemento) {
     }
 }
 
-// function criarParagrafos(texto) {
-//     let paragrafos = texto.split("\n");
-//     console.log(paragrafos);
-//     var paragrafo = "";
-//     for(let i = 0; i < paragrafos.length; i++) {
-//         if(paragrafos[i] === "") {
-//             paragrafo = paragrafo + "\n";
-//         } else {
-//             paragrafo = paragrafo + "<p>" + paragrafos[i] + "</p>" + "\n";
-//             $("#conteudo-convertido").val(paragrafo);
-//         }
-//     }
-// }
-
 function definirElementoTexto(elemento, texto) {
     let conteudoTexto = texto.split("\n");
     console.log(conteudoTexto);
@@ -172,11 +158,3 @@ function definirElementoTexto(elemento, texto) {
         }
     }
 }
-
-// var t = $("#conteudo-texto");
-
-// t.on("dblclick", function() {
-//     var selObj = window.getSelection();
-//     alert(selObj);
-//     var selRange = selObj.getRangeAt(0);
-// });
