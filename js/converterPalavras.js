@@ -147,14 +147,21 @@ function converterPalavrasComAcentos(elemento) {
 
 function definirElementoTexto(elemento, texto) {
     let conteudoTexto = texto.split("\n");
-    console.log(conteudoTexto);
     var textoMaisElemento = "";
     for(let i = 0; i < conteudoTexto.length; i++) {
         if(conteudoTexto[i] === "") {
             textoMaisElemento = textoMaisElemento + "\n";
-        } else {
-            textoMaisElemento = textoMaisElemento + "<" + elemento + ">\n" + conteudoTexto[i] + "\n</"+elemento+">" + "\n";
+        }else {
+            textoMaisElemento = textoMaisElemento + "<" + elemento + ">" + conteudoTexto[i] + "</" + elemento + ">" + "\n";
             $("#conteudo-convertido").val(textoMaisElemento);
         }
     }
 }
+
+// function quebraLinha(){
+//   var linha = document.getElementById('conteudo-texto').value;
+//   if (/[\n|\n\r]/.test(linha))
+//   {
+//     definirElementoTexto(elemento, textoConvertido);
+//   }
+// }
